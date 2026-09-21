@@ -68,11 +68,11 @@
     You can use lifecycle policies to control the movement of objects between different storage classes or delete them entirely, based on specific conditions like age or inactivity.
     you can see here in photo below
 
-    ![alt text](image-1.png)
+![alt text](image-1.png)
 
     * Review transtion and expiration actions
 
-    ![alt text](image-2.png)
+ ![alt text](image-2.png)
 
 
 ## S3 SNOW Family
