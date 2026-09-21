@@ -1,5 +1,115 @@
 # Amazon S3 Notes & Cheat Sheet
 
+## AWS S3 (Simple Storage Service):-
+        is a cloud- based storage service that allows you to store , manage ad retrieve large amounts of data  like files , images , videos and baclups securely and at large scsle.
+        It provides  highly reliable , scalable  objects objects storage , making our data accesssible from anywhere , anytime , via the internet. 
+
+        # KEY POINTS OF S3 Bucket :-
+             * Store data s obkects 
+             * Globalyyy Unique name
+             * Region Specifi 
+             * Each objects within a bucket is stored as a key-value pair
+    
+    - key is the object name  ( ehisch can contain slashes / , mimking directory structure ) 
+    - value is the content of the object (the file/data itself).
+            * Maximum object size :-
+             * 5TB os  the maximum size for a single object in Amazon S3 
+
+    Multi part upl  oad is recommended for pbjects larger than 5GB
+
+        In One region data is replicated in all diffeent server .
+
+
+        WE can also treat our S3 buket as static websit .
+         thee is an option in aws where we can configure statitic wesite hosting 
+            make it enable , it will work 
+            bucket webiste endpoint - you will get this
+            in the form of url which you can see .
+            at the ame time we have giv ethe all files permission t use as a website  other wise it will give errror   -- acccess denied 
+
+    And also we hav eto giv ethe permisssion of S3 Bucket Policies 
+     * whic is JASON - based access control policies that you attach directly to an S3 bucket to msnsge permisssion for accessing the bucket and its objects.
+
+     They allow  us to define who can access the data and what actions they can perform , such as read , write or delete enabling fine-grained control over the security aof our data stored in S3.
+
+
+## Write or paste your JASON policies in the Bucket policies editor .
+        * we can also USE aws policy generator to create a custom polic , or you can manually write the policy in JASON format.
+
+        ---> GetObject :- used to retrieve ir download files from am S3 bucket.
+        ---> PutObject :- Used to upload or files into an S3 bucket .
+
+##  S3 Versioning
+         whenver you fupload the files there is versioning in the aws
+
+         we can edit this in Edit Bucket Versioning and enable the feature and save the changes.
+         because this works only for the all files which is uploaded after the setting changes of versioining . otherwise it will show null inn versioning section.
+
+         so if we change our files design, does anyhting after the  versioning th e we can use it  . use the show versiion then you can see all the version.
+
+    ## S3 Replication 
+            S3 Replication
+            It allows you to automatically copy objects from one S3 bucket to another, which can be
+            • within the same region (Same-Region Replication - SRR) or
+            • in different regions (Cross-Region Replication - CRR).
+        It's commonly used for compliance, redundancy, and to improve data access performance by maintaining copies closer to your users.
+
+
+##                           S3 STORAGE CLASS
+
+
+
+
+ ###  The image shows a reference table outlining four AWS Amazon S3 Storage Classes, comparing their typical use cases, features, and cost structures.
+![alt text](image.png)
+
+
+##                        S3 Bucket Lifecycle
+    You can use lifecycle policies to control the movement of objects between different storage classes or delete them entirely, based on specific conditions like age or inactivity.
+    you can see here in photo below
+
+    ![alt text](image-1.png)
+
+    * Review transtion and expiration actions
+
+    ![alt text](image-2.png)
+
+
+## S3 SNOW Family
+
+
+        * The S3 Snow Family is a group of physical devices offered by AWS to help move large amounts of data to the cloud when using the internet isn't practical.
+        * These devices are used when there's too much data to upload over a regular connection or when dealing with remote areas without good internet.
+                *   Slocome
+                *   Snowball
+                *   Snowmobile
+                *   aws
+
+                ![alt text](image-7.png)
+    Aws Snow Family also helps to process data to the edge and migrate data into and out of AWS
+
+    The Snow Family includes:
+
+• AWS Snowcone: A small, portable device for a few terabytes of data.
+• AWS Snowball: A larger device for moving petabytes of data and can also be used for edge computing.
+• AWS Snowmobile: A massive truck-sized container used for exabyte-scale data transfers, typically used by big companies moving entire data centers.
+
+These devices help you transfer data quickly, securely, and cost-effectively to AWS, especially when internet speed or reliability is an issue.
+
+##            Amazon S3 Storag Gateway 
+        It is a hybrid cloud storage service that connects on premises environments to cloud storage in Amazon S3 . It helps extend your local storage to the cloud by acting as a bridge.       
+        
+         ![alt text](image-4.png)
+
+###  Differents kinds of gateway and use cases 
+
+![alt text](image-6.png)
+
+
+
+# CHEETSHEET 
+
+
 ## 1. Core Architecture: Buckets & Objects
 Amazon S3 is a highly scalable object storage service (not a block or file system). It utilizes a flat, non-hierarchical architecture.
 
