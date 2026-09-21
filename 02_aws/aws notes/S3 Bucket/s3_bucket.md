@@ -96,10 +96,10 @@
 
 These devices help you transfer data quickly, securely, and cost-effectively to AWS, especially when internet speed or reliability is an issue.
 
-##            Amazon S3 Storag Gateway 
+##            Amazon S3 Storage Gateway 
         It is a hybrid cloud storage service that connects on premises environments to cloud storage in Amazon S3 . It helps extend your local storage to the cloud by acting as a bridge.       
         
-         ![alt text](image-4.png)
+![alt text](image-4.png)
 
 ###  Differents kinds of gateway and use cases 
 
